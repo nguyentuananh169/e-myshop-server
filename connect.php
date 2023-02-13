@@ -5,6 +5,6 @@
     header('Access-Control-Max-Age: 1000');
     header('Access-Control-Allow-Headers: Content-Type, Content-Range, Content-Disposition, Content-Description, access_token, refresh_token');
     // 
-    $conn = mysqli_connect("localhost","root","","db_ntshop");
+    $conn = mysqli_connect("localhost","root","12345678","db_myshop");
     mysqli_query($conn,"set names 'utf8'");
 ?>

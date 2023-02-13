@@ -24,7 +24,7 @@ function createRefreshToken($payload=null){
 	$time = time();
 
 	$payload['iat']= $time;
-	$payload['exp']= $time + (60*60*24*7);
+	$payload['exp']= $time + (60*60*24*6);
 
 	return signJWT($payload,$key_refresh);
 	
@@ -60,30 +60,23 @@ function signJWT($payload=null, $key=null){
 	return $jwt;
 }
 function verifyAccessToken($token=null){
-	$data=[];
 	$key_access = 'access_token_MYSHOP';
-
-	if (empty($token)) {
-		$data['err']=true;
-		$data['msg']='Chưa có token';
-		return $data;
-	}
 	return verifyJWT($token, $key_access);
 }
 function verifyRefreshToken($token=null){
-	$data=[];
 	$key_refresh = 'refresh_token_MYSHOP';
-
-	if (empty($token)) {
+	return verifyJWT($token, $key_refresh);
+}
+function verifyJWT($token, $key){
+	$data=[];
+  
+	// kiểm tra nếu token không có
+  	if (empty($token)) {
 		$data['err']=true;
 		$data['msg']='Chưa có token';
 		return $data;
 	}
-	return verifyJWT($token, $key_refresh);
-}
-function verifyJWT($token=null, $key=null){
-	$data=[];
-	
+  
 	// tách token thành mảng ['header','payload','signature']
 	$detached = explode('.', $token);
 

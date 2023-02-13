@@ -25,6 +25,7 @@
         echo json_encode($res);
         die();
     }
+
     if ($parent_id==0) {
         $sqlCheck = "SELECT * FROM rating WHERE pro_id='$pro_id' AND user_id='$user_id' AND r_parent_id='0'";
         $rlCheck = mysqli_query($conn, $sqlCheck);
@@ -35,7 +36,7 @@
             die();
         }
     }
-    
+
     $sqlInsert = "INSERT INTO rating(pro_id, user_id, r_content, r_star, r_parent_id) VALUES('$pro_id','$user_id','$content','$star','$parent_id')";
     $rlInsert = mysqli_query($conn, $sqlInsert);
  

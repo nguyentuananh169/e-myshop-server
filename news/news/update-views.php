@@ -2,7 +2,7 @@
     include('../../connect.php');
     
     $news_id = $_POST['_id'];
-    	
+        
     $sql = "SELECT * FROM news WHERE news_id = '$news_id' ";
     $rl = mysqli_query($conn, $sql);
     $data = mysqli_fetch_assoc($rl);

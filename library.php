@@ -6,7 +6,7 @@ function URLImgProduct()
     } else {
         $pageURL = 'http://';
     }
-    $pageURL .= $_SERVER["SERVER_NAME"].'/api-ntshop/images/products/product/';
+    $pageURL .= $_SERVER["SERVER_NAME"].'/api_myshop/images/products/product/';
     
     return $pageURL;
 }
@@ -18,7 +18,7 @@ function URLImgCatePro()
     } else {
         $pageURL = 'http://';
     }
-    $pageURL .= $_SERVER["SERVER_NAME"].'/api-ntshop/images/products/category/';
+    $pageURL .= $_SERVER["SERVER_NAME"].'/api_myshop/images/products/category/';
     
     return $pageURL;
 }
@@ -30,7 +30,7 @@ function URLImgBrandPro()
     } else {
         $pageURL = 'http://';
     }
-    $pageURL .= $_SERVER["SERVER_NAME"].'/api-ntshop/images/products/brand/';
+    $pageURL .= $_SERVER["SERVER_NAME"].'/api_myshop/images/products/brand/';
     
     return $pageURL;
 }
@@ -41,7 +41,7 @@ function URLImgUser()
     } else {
         $pageURL = 'http://';
     }
-    $pageURL .= $_SERVER["SERVER_NAME"].'/api-ntshop/images/user/';
+    $pageURL .= $_SERVER["SERVER_NAME"].'/api_myshop/images/user/';
     
     return $pageURL;
 }
@@ -52,7 +52,7 @@ function URLImgBanner()
     } else {
         $pageURL = 'http://';
     }
-    $pageURL .= $_SERVER["SERVER_NAME"].'/api-ntshop/images/banner/';
+    $pageURL .= $_SERVER["SERVER_NAME"].'/api_myshop/images/banner/';
     
     return $pageURL;
 }
@@ -63,7 +63,7 @@ function URLImgNews()
     } else {
         $pageURL = 'http://';
     }
-    $pageURL .= $_SERVER["SERVER_NAME"].'/api-ntshop/images/news/';
+    $pageURL .= $_SERVER["SERVER_NAME"].'/api_myshop/images/news/';
     
     return $pageURL;
 }
